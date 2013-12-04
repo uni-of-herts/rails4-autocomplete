@@ -1,7 +1,7 @@
 require 'rails4-autocomplete/form_helper'
 require 'rails4-autocomplete/autocomplete'
 
-module Rails3JQueryAutocomplete
+module Rails4Autocomplete
   autoload :Orm              , 'rails4-autocomplete/orm'
   autoload :FormtasticPlugin , 'rails4-autocomplete/formtastic_plugin'
 

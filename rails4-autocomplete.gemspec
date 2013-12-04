@@ -4,7 +4,7 @@ require "rails4-autocomplete/version"
 
 Gem::Specification.new do |s|
   s.name = %q{rails4-autocomplete}
-  s.version = Rails4JQueryAutocomplete::VERSION
+  s.version = Rails4Autocomplete::VERSION
   s.platform = Gem::Platform::RUBY
   s.authors = ["alex_tian"]
   s.email = %q{peterwillcn@gmail.com}
@@ -28,7 +28,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rr'
   s.add_development_dependency 'simple_form',  '~>1.5'
 
-  s.files         = Dir['lib/**/*'] + %w{CHANGELOG.md LICENSE README.md Rakefile}
+  s.files         = Dir['lib/**/*'] + %w{CHANGELOG.md README.md Rakefile}
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]

@@ -59,7 +59,7 @@ class MockResponse
 end
 
 class ActionView::TestCase
-  include Rails3JQueryAutocomplete::Autocomplete
+  include Rails4Autocomplete::Autocomplete
   include SimpleForm::ActionViewExtensions::FormHelper
 
   setup :set_controller

@@ -1,9 +1,9 @@
 require 'test_helper'
 
-module Rails3JQueryAutocomplete
+module Rails4Autocomplete
 	module Orm
 		class MongoMapperTest < Test::Unit::TestCase
-			include Rails3JQueryAutocomplete::Orm::MongoMapper
+			include Rails4Autocomplete::Orm::MongoMapper
 
 			context "#get_autocomplete_order" do
 				context "order is specified" do

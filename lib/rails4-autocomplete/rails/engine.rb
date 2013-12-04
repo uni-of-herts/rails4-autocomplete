@@ -1,4 +1,4 @@
-module Rails3JQueryAutocomplete
+module Rails4Autocomplete
   module Rails
     class Engine < ::Rails::Engine ; end
   end

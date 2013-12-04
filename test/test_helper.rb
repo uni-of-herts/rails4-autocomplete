@@ -19,16 +19,16 @@ require 'rr'
 require 'rails/test_help'
 require 'rails4-autocomplete'
 
-module Rails3JQueryAutocomplete
+module Rails4Autocomplete
   class Application < ::Rails::Application
   end
 end
 
-Rails3JQueryAutocomplete::Application.routes.draw do
+Rails4Autocomplete::Application.routes.draw do
   match '/:controller(/:action(/:id))'
 end
 
-ActionController::Base.send :include, Rails3JQueryAutocomplete::Application.routes.url_helpers
+ActionController::Base.send :include, Rails4Autocomplete::Application.routes.url_helpers
 
 class Test::Unit::TestCase
   include RR::Adapters::TestUnit

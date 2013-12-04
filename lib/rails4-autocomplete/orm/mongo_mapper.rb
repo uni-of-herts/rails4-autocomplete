@@ -1,4 +1,4 @@
-module Rails3JQueryAutocomplete
+module Rails4Autocomplete
 	module Orm
 		module MongoMapper
 			def get_autocomplete_order(method, options, model=nil)

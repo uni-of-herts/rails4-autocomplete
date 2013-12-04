@@ -1,8 +1,8 @@
 require 'test_helper'
 
-module Rails3JQueryAutocomplete
+module Rails4Autocomplete
   class AutocompleteTest < Test::Unit::TestCase
-    include Rails3JQueryAutocomplete::Autocomplete
+    include Rails4Autocomplete::Autocomplete
 
     context '#get_autocomplete_limit' do
       context 'the limit option was specified' do
