@@ -33,7 +33,7 @@ module Rails4Autocomplete
 
         case scopes
           when Symbol then
-            items = items.send(scope)
+            items = items.send(scopes)
           when Array then
             scopes.each { |scope| items = items.send(scope) } unless scopes.empty?
         end
