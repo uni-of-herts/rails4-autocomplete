@@ -17,6 +17,7 @@ module Rails4Autocomplete
         model          = parameters[:model]
         method         = parameters[:method]
         options        = parameters[:options]
+        scopes         = options[:scopes]
         is_full_search = options[:full]
         term           = parameters[:term]
         limit          = get_autocomplete_limit(options)
@@ -27,7 +28,16 @@ module Rails4Autocomplete
         else
           search = '^' + Regexp.escape(term)
         end
-        items  = model.where(method.to_sym => /#{search}/i).limit(limit).order_by(order)
+
+        items = model.where(method.to_sym => /#{search}/i).limit(limit).order_by(order)
+
+        case scopes
+          when Symbol then
+            items = items.send(scopes)
+          when Array then
+            scopes.each { |scope| items = items.send(scope) } unless scopes.empty?
+        end
+        items
       end
     end
   end
