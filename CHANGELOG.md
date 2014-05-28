@@ -1,5 +1,6 @@
 # Changelog
 
+* 1.0.8 Options can be passed to jQuery autocomplete initializer
 * 1.0.7
   * mongoid: escape regular expression in search
   * When possible, use jQuery .on() rather than .live()
