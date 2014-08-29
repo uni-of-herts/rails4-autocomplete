@@ -1,5 +1,6 @@
 # Changelog
 * 1.1.0 Fixed issue with options initialization, options now used only with initialization by specific input id
+* 1.0.9 Fixed a problem in the change function. It was trying to parse as JSON a undefined value
 * 1.0.8 Options can be passed to jQuery autocomplete initializer
 * 1.0.7
   * mongoid: escape regular expression in search
