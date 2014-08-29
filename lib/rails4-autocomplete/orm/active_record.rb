@@ -18,7 +18,6 @@ module Rails4Autocomplete
         limit   = get_autocomplete_limit(options)
         order   = get_autocomplete_order(method, options, model)
 
-
         items = model.all
 
         scopes.each { |scope| items = items.send(scope) } unless scopes.empty?
