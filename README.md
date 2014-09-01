@@ -1,6 +1,7 @@
 ## Status
 [![Build Status](https://secure.travis-ci.org/peterwillcn/rails4-autocomplete.png)](http://travis-ci.org/peterwillcn/rails4-autocomplete.png)
 
+
 Unfortunately, I don't have much time to work on this gem, I'm looking for
 someone to help with its maintenance. Send me an email if you are interested in
 getting push privileges to this repo.
