@@ -16,7 +16,7 @@ module SimpleForm
     class AutocompleteInput < Base
       include Autocomplete
 
-      def input
+      def input(wrapper_options)
         @builder.autocomplete_field(
           attribute_name,
           options[:url],
@@ -37,7 +37,7 @@ module SimpleForm
     class AutocompleteCollectionInput < CollectionInput
       include Autocomplete
 
-      def input
+      def input(wrapper_options)
         # http://www.codeofficer.com/blog/entry/form_builders_in_rails_discovering_field_names_and_ids_for_javascript/
         hidden_id = "#{object_name}_#{attribute_name}_hidden".gsub(/\]\[|[^-a-zA-Z0-9:.]/, "_").sub(/_$/, "")
         id_element = options[:id_element]
