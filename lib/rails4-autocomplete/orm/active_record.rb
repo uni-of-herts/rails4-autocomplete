@@ -37,6 +37,7 @@ module Rails4Autocomplete
 
       def get_autocomplete_where_clause(model, term, method, options)
         table_name = model.table_name
+        term = term.gsub(/([_%\\])/, '\\\\\1')
         is_full_search = options[:full]
         like_clause = (postgres?(model) ? 'ILIKE' : 'LIKE')
         ["LOWER(#{table_name}.#{method}) #{like_clause} ?", "#{(is_full_search ? '%' : '')}#{term.downcase}%"]
