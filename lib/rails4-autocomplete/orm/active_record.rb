@@ -27,7 +27,7 @@ module Rails4Autocomplete
             limit(limit).order(order)
         items = items.where(where) unless where.blank?
 
-        items
+        items.to_a
       end
 
       def get_autocomplete_select_clause(model, method, options)
