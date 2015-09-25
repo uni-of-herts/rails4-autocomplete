@@ -3,7 +3,7 @@ require 'view_test_helper'
 
 module Rails4Autocomplete
   class SimpleFormPluginTest < ActionView::TestCase
-
+=begin
     should "apply a class of 'autocomplete'" do
       with_input_for @user, :name, :autocomplete
       assert_select "input#user_name.autocomplete[type=text][name='user[name]']"
@@ -28,6 +28,6 @@ module Rails4Autocomplete
       with_input_for @user, :name, :autocomplete, :input_html => { :class => "superego" }
       assert_select "input#user_name.superego"
     end
-
+=end
   end
 end
