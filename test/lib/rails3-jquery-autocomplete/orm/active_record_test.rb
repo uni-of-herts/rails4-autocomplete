@@ -112,6 +112,13 @@ module Rails4Autocomplete
             assert_equal ["LOWER(table_name.method) LIKE ?", "%query%"], get_autocomplete_where_clause(@model, @term, @method, @options)
           end
         end
+
+        context 'special char search' do
+          should 'quote special characters in search term' do
+            mock(self).postgres?(@model) { false }
+            assert_equal ["LOWER(table_name.method) LIKE ?", "q\\_ue\\%r\\\\y%"], get_autocomplete_where_clause(@model, 'q_ue%r\y', @method, @options)
+          end
+        end
       end
 
       context '#postgres?' do
