@@ -10,8 +10,15 @@ module Rails4Autocomplete
   end
 end
 
-class ActionController::Base
-  include Rails4Autocomplete::Autocomplete
+if Rails::VERSION::MAJOR >= 6
+  ActiveSupport.on_load(:action_controller_base) do
+    ActionController::Base.send(
+      :include,
+      Rails4Autocomplete::Autocomplete
+    )
+  end
+else
+  ActionController::Base.send(:include, Rails4Autocomplete::Autocomplete)
 end
 
 require 'rails4-autocomplete/formtastic'
